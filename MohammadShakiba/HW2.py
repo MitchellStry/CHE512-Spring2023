@@ -28,7 +28,7 @@ print(taylor_series1(0.5, 100))
 
 def taylor_series2(x, n):
     """
-    This function comptues the 1/(1-x) using Taylor series expansion
+    This function comptues the sin(x) using Taylor series expansion
     """
     taylor = 0.0
     exact = cmath.sin(x)
