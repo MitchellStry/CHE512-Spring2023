@@ -1,4 +1,5 @@
 yet_another_file.py
 *.txt
 .ipynb_checkpoints
+*.png
 
