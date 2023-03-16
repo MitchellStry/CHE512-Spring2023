@@ -1,4 +1,5 @@
-#You actually thought I wrote something here?
+README
+*********************************************
+#Or don't. I'm just text on a screen.
 
-*item 1
-*item 2
+#You actually thought I wrote something here?

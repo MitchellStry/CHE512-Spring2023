@@ -10,7 +10,18 @@ Welcome to Test's documentation!
    :maxdepth: 2
    :caption: Contents:
 
+   readme.md
+   mylib.rst
 
+main
+*****
+.. automodule:: main
+   :members:
+
+flib
+*****
+.. automodule:: mylib.flib
+   :members:
 
 Indices and tables
 ==================

@@ -10,9 +10,9 @@
 # add these directories to sys.path here. If the directory is relative to the
 # documentation root, use os.path.abspath to make it absolute, like shown here.
 #
-# import os
-# import sys
-# sys.path.insert(0, os.path.abspath('.'))
+import os
+import sys
+sys.path.insert(0, os.path.abspath('../../'))
 
 
 # -- Project information -----------------------------------------------------
@@ -35,16 +35,16 @@ release = 'v0.1'
 # ones.
 extensions = [
             'sphinx.ext.autodoc',
-                'sphinx.ext.intersphinx',
-                    'sphinx.ext.mathjax',
-                        'sphinx.ext.ifconfig',
-                            'sphinx.ext.viewcode',
-                                'sphinx.ext.githubpages',
-                                    'sphinx.ext.napoleon',
-                                        'sphinx.ext.autosummary',
-                                            'sphinx.ext.extlinks',
-                                                'recommonmark'
-                                                ]
+            'sphinx.ext.intersphinx',
+            'sphinx.ext.mathjax',
+            'sphinx.ext.ifconfig',
+            'sphinx.ext.viewcode',
+            'sphinx.ext.githubpages',
+            'sphinx.ext.napoleon',
+            'sphinx.ext.autosummary',
+            'sphinx.ext.extlinks'
+            
+            ]
 # Napoleon settings
 napoleon_google_docstring = True
 napoleon_numpy_docstring = True
@@ -81,3 +81,9 @@ html_theme = 'classic'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# The suffix(es) of source filenames.
+# You can specify multiple suffix as a list of string:
+#
+# source_suffix = ['.rst', '.md']
+source_suffix = ['.rst', '.md', '.ipynb' ]
