@@ -17,7 +17,10 @@ Homework8
 .. automodule:: Homework8.homework8
    :members:
 
-
+test
+****************
+.. automodule:: Homework8.test
+   :members:
 
 Indices and tables
 ==================
