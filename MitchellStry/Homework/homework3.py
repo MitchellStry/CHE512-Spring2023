@@ -17,36 +17,38 @@ N is number of electrons
 import math
 import numpy as np
 
-a=3500
-K=14500
-m=250
-L=5
+a=3500.0
+K=14500.0
 Kb=1.380649*10**-23
-T=300
-gamma=100
+T=300.0
+gamma=100.0
 C=0.1
-t= 1.0 
-omega0=1.0 
-N=5
-def Hamiltonian():
-    c = np.zeros((L,N), dtype=float)
-    b = np.zeros((L,), dtype=float)
-
-if Ei > Ea:
-    Eab=Ei-Ea
-if Ea> Ei:
-    Eab=Ea-Ei
-
-def Wt():
-
-def tau(C,Ekin,Eab):
-    tau=hbar*(1+(C/Ekin))/(Eab)
-    return tau
-
-
-def E2():
-
-
-def hamiltonian(a,vibfree,E2,K,m,v):
-    E1=a*vibfree
-    H=E1+E2+E3
+t= 1.0
+L=5.0
+m=250.0
+#The numbers above are from the literature.
+def Hamiltonian(N,m,L,omega):
+    """
+    Solves for the Hammiltonian given certain perameters.
+    N is the number of electrons, m is the mass, L is the length, and omega is the phonon frequency
+    """
+    N=N
+    omega1=omega
+    c = np.zeros((L,N))
+    b = np.zeros((L,))
+    for i in range(L):
+        for j in range(N):
+            c[i,j] = np.sqrt(2.0/(L+1)) * np.sin((j+1)*np.pi*(i+1)/(L+1))
+        b[i] = np.sqrt(1.0/(2.0*omega1)) * (np.sqrt(omega1) * i + 1j)
+    K = np.zeros((N*L, N*L)) 
+    V = np.zeros((N*L, N*L)) 
+    """
+    Calculate the matrices for the kinetic and potential energies
+    """
+   for i in range(L):
+       for j in range(N):
+           K[i*N+j,i*N+(j+1)%N] = -t
+           K[i*N+j,(i+1)%L*N+j] = -t
+           K[i*N+j,i*N+j] = omega1*(j+0.5)
+           V[i*N+j,i*N+j] = g*b[i]
+    H = K + V
