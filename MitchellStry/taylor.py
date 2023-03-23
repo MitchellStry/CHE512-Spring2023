@@ -23,4 +23,5 @@ def taylor1(taylor_aporx,exact):
     taylor=x1
     return taylor, exact
 print('_______________________________________________________________________________')
-print(f'The first number is the exact value and the second is the taylor aproximation {result}')
+print(f'The first number is the exact value and the second is the taylor aproximation {taylor1}')
+
