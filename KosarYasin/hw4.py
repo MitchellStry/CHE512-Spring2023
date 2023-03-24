@@ -19,7 +19,7 @@ def root_finder(f_name, f_params, left, right, precision):
             left = midpoint
     return (left + right) / 2
 
-def fermi_energy(levels, N, kT):
+def fermi_energy(E, levels, N, kT):
     '''
     Find the Fermi energy for a system of energy levels and N electrons.
     levels (list): A list of energy levels.
@@ -27,15 +27,9 @@ def fermi_energy(levels, N, kT):
     kT (float): The thermal energy.
     Returns:
     float: The Fermi energy of the system.'''
-    f_params = (levels, N, kT)
-    left = min(levels)
-    right = max(levels)
-    precision = 1e-6
-    def f_name(E, levels, N, kT):
-        value = 0
-        for level in levels:
-            value = value + 1 / (1 + np.exp((E - level) / kT))
-            return value - N
-    return root_finder(f_name, f_params, left, right, precision)
+    value = 0
+    for level in levels:
+        value = value + 1 / (1 + np.exp((E - level) / kT))
+    return value - N
 
 
