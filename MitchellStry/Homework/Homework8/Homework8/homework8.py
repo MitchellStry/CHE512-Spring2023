@@ -22,7 +22,6 @@ import matplotlib.pyplot as plt
 #The below is homeworks 3,5,6.
 
 a=3500.0
-K=14500.0
 Kb=1.380649*10**-23
 T=300.0
 gamma=100.0
@@ -30,6 +29,15 @@ C=0.1
 t= 1.0
 L=5.0
 m=250.0
+V=[]
+K=[]
+N=0
+omega1=0
+omega=0
+j=0
+i=0
+t=0
+H=0
 #The numbers above are from the literature.
 class problemsolving:
     """
@@ -54,6 +62,7 @@ class problemsolving:
         c = np.zeros((L,N))
         b = np.zeros((L,))
         return N,omega1,c,b
+    N,omega1,c,b= matrixmaking(N,omega)
     def energies (L,N,omega1):
         """
         This function solves the energies.
@@ -74,7 +83,9 @@ class problemsolving:
         """
         Calculate the matrices for the kinetic and potential energies
         """
-    def matrixsolve(L,N,j,i,t,omega1):
+        return K,V
+    K,V,= energies(L,N,omega1)
+    def matrixsolve(L,N,j,i,t,omega1,K,V):
         """
         Solves the Matrixes
         Args:
@@ -93,6 +104,7 @@ class problemsolving:
                 K[i*N+j,i*N+j] = omega1*(j+0.5)
                 V[i*N+j,i*N+j] = g*b[i]
         return K,V
+    K,V,= matrixsolve(L,N,j,i,t,omega1)
     def finishedhamil(K,V):
         """
         Solves the Hamiltonian
@@ -112,4 +124,5 @@ class problemsolving:
         plt.title("Hamiltonian")
         plt.show()
         H=K+V
+        print(F'The solution to the hamiltonian is {H}')
         return H
