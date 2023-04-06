@@ -126,3 +126,4 @@ class problemsolving:
         H=K+V
         print(F'The solution to the hamiltonian is {H}')
         return H
+    H=finishedhamil(K,V)
