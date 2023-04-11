@@ -3,3 +3,4 @@ The file structure is as follows
 If the assignment is only a single document, it is within this highest level of the Homework directory.
 
 If the assignment requires multiple files, it is within a directory within this Homework directory.
+Directories within this directory have their name capitolized while files do not.

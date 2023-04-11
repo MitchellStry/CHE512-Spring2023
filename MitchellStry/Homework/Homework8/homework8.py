@@ -16,7 +16,7 @@ N is number of electrons
 """
 import math
 import numpy as np
-f = open("Hamiltonian File", "w+")
+f=open("Hamiltonian_File.txt", "w+")
 import sys
 import matplotlib.pyplot as plt
 #The below is homeworks 3,5,6.
@@ -63,6 +63,7 @@ class problemsolving:
         b = np.zeros((L,))
         return N,omega1,c,b
     N,omega1,c,b= matrixmaking(N,omega)
+    print(F"The number of electrons is {N}, the frequency is {omega1}, the fermion opperator is {c} and the phonon opperator is {b}.")
     def energies (L,N,omega1):
         """
         This function solves the energies.
@@ -105,6 +106,7 @@ class problemsolving:
                 V[i*N+j,i*N+j] = g*b[i]
         return K,V
     K,V,= matrixsolve(L,N,j,i,t,omega1)
+    print(F"The solution to the matrixes is Kenetic={K}, and Potential={V}")
     def finishedhamil(K,V):
         """
         Solves the Hamiltonian
