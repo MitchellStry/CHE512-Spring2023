@@ -1,14 +1,16 @@
 import math
 import sys
-kb=1.380649*10**-23
-h=6.626*10**-34
-me=9.11*10**-31
+
 def fermirootfinder(left,right,number_of_electrons,precision):
     """
     This function should compute the the fermi enegry from the number of electrons.
     """
+    kb=1.380649*10**-23
+    h=6.626*10**-34
+    me=9.11*10**-31
+
     ne=number_of_electrons
-    Ef=((h**2)/2*me)*((3*(math.pi**2)*ne)**(2/3))
+    ef=((h**2)/2*me)*((3*(math.pi**2)*ne)**(2/3))
     
     levels=[]
     """
@@ -47,3 +49,6 @@ def fermirootfinder(left,right,number_of_electrons,precision):
                 Fermie=levels.index(x)
                 return Fermie
                 break
+Fermie= fermirootfinder(-2,1,1,.001)
+
+print(F"The Fermi energy is {Fermie}.")
