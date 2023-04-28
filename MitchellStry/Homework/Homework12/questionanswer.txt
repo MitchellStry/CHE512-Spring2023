@@ -1,0 +1,5 @@
+The bubblesort method did have scaling similar to quadratic scaling, with noticable bumps.
+
+The mergesort followed similar scaling to the bubblesort.
+
+Both scalings can be seen in the .png uploaded in the same folder..
