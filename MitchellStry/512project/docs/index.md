@@ -4,14 +4,16 @@ Welcome to the Ray Group. We are a research lab at SUNY buffalo interested in ma
 
 ## Our Research Areas of Interest
 
-* `Solution-Cathode Glow-Discharge
-* `Distance-of-Flight Mass Spectrometry
-* `Soft-Landing Mass Spectrometry
-* `Solid-State Detector Arrays for Mass Spectrometry
-* `New Ionization Sources for Mass Spectrometry
-* `Atomic Spectroscopy
-* ` Novel Plasma Systems for Atomic Spectrometry
-* `Metallomics: Analysis by Parallel Atomic and Molecular Mass Spectrometry
+* Solution-Cathode Glow-Discharge
+* Distance-of-Flight Mass Spectrometry
+* Soft-Landing Mass Spectrometry
+* Solid-State Detector Arrays for Mass Spectrometry
+* New Ionization Sources for Mass Spectrometry
+* Atomic Spectroscopy
+* Novel Plasma Systems for Atomic Spectrometry
+* Metallomics: Analysis by Parallel Atomic and Molecular Mass Spectrometry
+
+##A More Detailed Look at Our Work
 
 #### Distance of Flight Mass Spectrometry (DOFMS)
 The DOFMS employs a velocity-based m/z-separation approach that is the complement of traditional time-of-flight mass spectrometry (TOFMS). At a specific instant after acceleration, all m/z will achieve a sharp spatial focus and can then be directed onto the surface of a position-sensitive ion detector where their m/z is determined based upon location. Alternatively, a conventional TOFMS detector can be used for ion detection, in which case a constant-momentum acceleration (CMA) TOFMS experiment is conducted. DOFMS holds a number of benefits that derive from the ability to spatially separate ions of different m/z, simultaneously, and without complicated instrumentation. Our laboratory is currently involved in investigating new applications of DOFMS and in further developing the technique.
